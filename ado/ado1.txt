@@ -1,0 +1,77 @@
+ADO:
+======
+
+Defnition:ActiveX Data Object
+
+->It sis used to send the data from front end to backend
+->GUI=>Graphical User Interface
+->User can interact with the backend
+->Datas can send to the server side
+->Sql(Structure query Language)
+->Insert a record
+->Update a record
+->Delete a record
+->Stored procedure insert,update,delete
+
+
+Namespace:
+==========
+using system.data.sqlclient;
+
+Ado.Net Databases:
+======================
+1.Sql server
+2.Oracle
+3.Oledb(Object linking enabled database)
+4.Odbc(Open database connectivity)
+
+Steps to follow:
+=================
+1.Connection(Connection Establish)
+2.Command(Query pass)
+3.DataReader(Connected Architecture)
+4.DataAdapter(Dis-Connected Architecture)
+5.Dataset(Collection of tables),Datatable(Single table)
+
+
+Important Classes in ADO.NET
+
+We can also observe various classes in the preceding diagram. They are:
+
+Connection Class
+Command Class
+DataReader Class
+DataAdaptor Class
+DataSet.Class
+1. Connection Class:
+=======================
+
+In ADO.NET, we use these connection classes to connect to the database. These connection classes also manage transactions and connection pooling.
+
+2. Command Class:
+=================
+
+The Command class provides methods for storing and executing SQL statements and Stored Procedures. The following are the various commands that are executed by the Command Class.
+
+ExecuteReader: 
+=================
+Returns data to the client as rows. This would typically be an SQL select statement or a Stored Procedure that contains one or more select statements. This method returns a DataReader object that can be used to fill a DataTable object or used directly for printing reports and so forth.
+
+ExecuteNonQuery:
+================
+ Executes a command that changes the data in the database, such as an update, delete, or insert statement, or a Stored Procedure that contains one or more of these statements. This method returns an integer that is the number of rows affected by the query.
+ExecuteScalar: This method only returns a single value. This kind of query returns a count of rows or a calculated value.
+
+ExecuteXMLReader:
+=================
+ (SqlClient classes only) Obtains data from an SQL Server 2000 database using an XML stream. Returns an XML Reader object.
+
+3. DataReader Class:
+=========================
+
+The DataReader is used to retrieve data. It is used in conjunction with the Command class to execute an SQL Select statement and then access the returned rows.
+
+4. DataAdapter Class:
+===================
+
+The DataAdapter is used to connect DataSets to databases. The DataAdapter is most useful when using data-bound controls in Windows Forms, but it can also be used to provide an easy way to manage the connection between your application and the underlying database tables, views and Stored Procedures.

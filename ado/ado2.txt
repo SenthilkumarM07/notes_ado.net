@@ -1,0 +1,104 @@
+ADO:
+=====
+->Its is a connected architecture
+->It is used to connect all the database
+
+Ado.Net:
+==========
+It is connected as well as disconnected architecture
+It is a latest connection tool
+It is used to connect all the database
+
+Namespace:
+===========
+using.system.data.sqlclient;
+using.system.data.oracleclient;
+using.system.data.oledb;
+
+Classes:
+========
+XXX connection->Used to establish and connect.
+XXX command->Write and execute the command.
+
+XXX DataReader
+XXX DataAdapter(Both are used for retrieval from database)
+
+
+Two ways:
+==========
+1.Default constructor
+2.Parameterised Constructor
+
+
+Syntax:
+============
+XXX connection obj=new XXXconnection();
+obj.connectionstring="";
+obj.open();
+
+
+Example:
+==========
+Sqlconnection Con=new sqlconnection();
+con.connectionstring="user id=sa;pwd=sql;data source=.;database=master";
+con.open();
+
+Parameterised Constructor:
+===========================
+XXX connection obj=new XXXconnection();
+con.open();
+
+Example:
+==========
+sqlconnection con=new sqlconnection("server=.;initial catalog=master;integrated security=true");
+con.open();
+
+Command Class:
+==============
+
+1.Create Object
+2.Write a Command
+3.Give a Connection
+4.Parameter Using
+5.Method Execution
+
+
+Parameter Symbol:
+================
+Sqlclient=@Fieldname
+OracleClient=:Fieldname
+oledb=?
+
+Methods:
+==========
+1.ExecuteNonQuery(Insert,Delete,Update)
+2.ExecuteReader(Select)
+3.ExecuteScalar(Aggregate Function)
+4.Dispose(To Reuse the Object Name)
+
+
+DataReader:
+===========
+-It is used to read data from database and it is a read and forward only connected oriented architecture during fetch the data form db.
+-DB will fetch the data very fast when compared with dataset.
+-Generally we will use Execute reader object to bind data to datareader.
+
+DataAdapter:
+==============
+-It will acts as a bridge between dataset / datatable and database.
+-this Obj-object is used to read data from DB and bind that data to dataset /datatable
+-Adapter is a disconnected oriented Architecture.
+
+DataSet:
+======
+-It is a disconnected oriented architecture that means there is no need to active Connections during work with datasets and it is a collection of datatables and relations between tables.
+-It is used to hold multiple tables with data.
+-You can select data from tables,create ,view based on table and ask child rows over relations.
+-Also dataset provides you with rich features like saving data as xml and loading Xml data.
+
+DataTable:
+=============
+-Datatable represents a single table in the database.
+-It has rows and columns.
+-There is no much difference between Dataset and datatable.
+-Dataset is simply the collection of datatable.
